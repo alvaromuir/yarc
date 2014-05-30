@@ -1,4 +1,4 @@
-#jshint unused: vars 
+#jshint unused: vars
 define [
   "angular"
   "angular-mocks"
@@ -6,12 +6,12 @@ define [
 ], (angular, mocks, app) ->
   "use strict"
   describe "Controller: MainCtrl", ->
-    
+
     # load the controller's module
-    beforeEach module("datavizApp.controllers.MainCtrl")
+    beforeEach module("yarcApp.controllers.MainCtrl")
     MainCtrl = undefined
     scope = undefined
-    
+
     # Initialize the controller and a mock scope
     beforeEach inject(($controller, $rootScope) ->
       scope = $rootScope.$new()
@@ -27,4 +27,3 @@ define [
     return
 
   return
-

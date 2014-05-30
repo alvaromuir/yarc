@@ -1,8 +1,13 @@
 define ["angular"
         "controllers/yeoman"
-        ], (angular, yeoman) ->
+        "controllers/dmp"
+        ], (angular, yeoman, dmp) ->
   "use strict"
 
-  ngApp = angular.module 'datavizApp.controllers.MainCtrl', []
-  ngApp.controller 'MainCtrl', ($scope) ->
-    yeoman $scope
+  angular.module 'yarcApp.controllers.MainCtrl', []
+    .controller 'MainCtrl', ($scope) ->
+      yeoman $scope
+
+  angular.module 'yarcApp.controllers.DmpCtrl', []
+    .controller 'DmpCtrl', ($scope, $http) ->
+      dmp $scope, $http
